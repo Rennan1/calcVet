@@ -5,12 +5,12 @@ const Sidebar = () => {
   const linkClass = ({ isActive }) =>
     `p-4 transition ${
       isActive
-        ? "text-primary font-semibold bg-gray-100"
+        ? "text-primary font-semibold bg-green-500/20 rounded-xl"
         : "hover:text-primary hover:scale-110"
     }`;
     
   return (
-    <aside className="w-64 flex min-h-screen border-r pt-5">
+    <aside className="w-64 h-full border-r shadow pt-5">
       <ul className="flex flex-col">
         <NavLink to="/" className={linkClass}>
           Tela Inicial

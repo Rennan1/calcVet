@@ -36,7 +36,7 @@ const EquipoCalculatorCard = ({
   return (
     <div>
       <h1 className="text-xl mt-10">{title}</h1>
-      <div className="flex flex-col md:flex-row gap-5">
+      <div className="flex flex-col md:flex-row md:gap-5">
         <div className="flex flex-col">
           <label className="font-light">{volumeLabel}</label>
           <Input
@@ -72,7 +72,7 @@ const EquipoCalculatorCard = ({
           </Button>
         </div>
         {resultado && (
-          <p className="text-lg font-bold mt-5">
+          <p className="text-lg font-bold mt-6">
             Resultado: {resultado} {resultUnitLabel}
           </p>
         )}

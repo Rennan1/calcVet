@@ -6,10 +6,10 @@ import RessurectionCard from "@/components/RessurectionCard";
 
 const Fluidoterapia = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center text-center">
       <IntroFluidoterapia />
       <RessurectionCard />
-      <div className="mt-10"></div>
+      <div className=""></div>
       <EquipoCalculatorCard
         title="Macro Equipo - 20 gotas/mL"
         factorPerHourToPerSecond={180}

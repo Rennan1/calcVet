@@ -36,43 +36,47 @@ const EquipoCalculatorCard = ({
   return (
     <div>
       <h1 className="text-xl mt-10">{title}</h1>
-      <div className="flex flex-col md:flex-row md:gap-5">
-        <div className="flex flex-col">
-          <label className="font-light">{volumeLabel}</label>
-          <Input
-            value={mlTotal}
-            onChange={(e) => setMlTotal(e.target.value)}
-            placeholder="Exemplo: 360"
-            className="w-full md:max-w-[120px]"
-          />
-        </div>
-        <div className="flex flex-col">
-          <label className="font-light">{hoursLabel}</label>
-          <Input
-            value={horas}
-            onChange={(e) => setHoras(e.target.value)}
-            placeholder="Exemplo: 2"
-            className="w-full md:max-w-[120px]"
-          />
-        </div>
-        <div className="flex gap-2 mt-1">
-          <Button
-            variant="outline"
-            onClick={calcular}
-            className="mt-5 hover:bg-green-500 transition hover:scale-105"
-          >
-            Calcular
-          </Button>
-          <Button
-            variant="outline"
-            onClick={limpar}
-            className="mt-5 hover:bg-red-500 transition hover:scale-105"
-          >
-            Limpar
-          </Button>
+      <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row md:gap-5">
+          <div className="flex flex-col">
+            <label className="font-light">{volumeLabel}</label>
+            <Input
+              type="number"
+              value={mlTotal}
+              onChange={(e) => setMlTotal(e.target.value)}
+              placeholder="Exemplo: 360"
+              className="w-full md:h-12 md:max-w-[120px]"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label className="font-light">{hoursLabel}</label>
+            <Input
+              type="number"
+              value={horas}
+              onChange={(e) => setHoras(e.target.value)}
+              placeholder="Exemplo: 2"
+              className="w-full md:h-12 md:max-w-[120px]"
+            />
+          </div>
+          <div className="flex gap-2 mt-1">
+            <Button
+              variant="outline"
+              onClick={calcular}
+              className="mt-5 hover:bg-green-500 md:h-12 transition hover:scale-105"
+            >
+              Calcular
+            </Button>
+            <Button
+              variant="outline"
+              onClick={limpar}
+              className="mt-5 hover:bg-red-500 md:h-12 transition hover:scale-105"
+            >
+              Limpar
+            </Button>
+          </div>
         </div>
         {resultado && (
-          <p className="text-lg font-bold mt-6">
+          <p className="text-lg font-bold mt-4 text-center">
             Resultado: {resultado} {resultUnitLabel}
           </p>
         )}

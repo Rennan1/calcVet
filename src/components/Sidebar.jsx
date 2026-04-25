@@ -18,6 +18,9 @@ const Sidebar = () => {
         <NavLink to="/fluidoterapia" className={linkClass}>
           Cálculo de Fluidoterapia
         </NavLink>
+        <NavLink to="/regra-de-3" className={linkClass}>
+          Regra de 3
+        </NavLink>
       </ul>
     </aside>
   );

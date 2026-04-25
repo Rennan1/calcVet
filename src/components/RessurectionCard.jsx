@@ -11,7 +11,7 @@ const RessurectionCard = () => {
           <label className="">Peso do animal (kg)</label>
           <Input
             placeholder="Exemplo: 18"
-            className="w-full md:max-w-[120px]"
+            className="w-full md:h-12 md:max-w-[120px]"
           />
         </div>
 
@@ -19,21 +19,21 @@ const RessurectionCard = () => {
           <label className="">Volume total (ml)</label>
           <Input
             placeholder="Exemplo: 360"
-            className="w-full md:max-w-[120px]"
+            className="w-full md:h-12 md:max-w-[120px]"
           />
         </div>
         <div className="flex gap-2 mt-1">
           <Button
             variant="outline"
             // onClick={calcular}
-            className="mt-5 hover:bg-green-500 transition hover:scale-105"
+            className="mt-5 hover:bg-green-500 md:h-12 transition hover:scale-105"
           >
             Calcular
           </Button>
           <Button
             variant="outline"
             // onClick={limpar}
-            className="mt-5 hover:bg-red-500 transition hover:scale-105"
+            className="mt-5 hover:bg-red-500 md:h-12 transition hover:scale-105"
           >
             Limpar
           </Button>

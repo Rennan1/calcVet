@@ -60,39 +60,36 @@ const Fluidoterapia = () => {
     <span>Cão: 15 - 20ml/kg</span>
     <span>Gato: 5 a 10ml/kg</span>
     </div>
-    <div className="flex mt-4 gap-2">
+    <div className="flex flex-col md:flex-row mt-4 gap-2">
     <div className="flex flex-col">
     <label className="">Peso do animal (kg)</label>
-    <Input placeholder="Exemplo: 18" className='w-full max-w-[120px]'/>
+    <Input placeholder="Exemplo: 18" className='w-full md:max-w-[120px]'/>
     </div>
 
     <div className="flex flex-col">
     <label className="">Volume total a ser administrado (ml)</label>
-    <Input placeholder="Exemplo: 360" className='w-full max-w-[120px]'/>
+    <Input placeholder="Exemplo: 360" className='w-full md:max-w-[120px]'/>
     </div>
     </div>
     <div className="mt-10">
     </div>
     <p className="text-xl">Macro Equipo - 20 gotas/mL</p>
-    <div className="flex gap-5 items-end">
+    <div className="flex flex-col md:flex-row gap-5">
       <div className="flex flex-col">
       <label className="font-light">Valor total em mL</label>
       <Input 
       value={mlTotalMacro}
       onChange={(e) => setMlTotalMacro(e.target.value)}
-      placeholder="Exemplo: 360" className='w-full max-w-[120px]'/>
+      placeholder="Exemplo: 360" className='w-full md:max-w-[120px]'/>
       </div>
       <div className="flex flex-col">
       <label className="font-light">Em quantas horas?</label>
       <Input 
       value={horasMacro}
       onChange={(e) => setHorasMacro(e.target.value)}
-      placeholder="Exemplo: 2 " className='w-full max-w-[120px]'/>
-
-      
-
+      placeholder="Exemplo: 2 " className='w-full md:max-w-[120px]'/>    
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-1">
       <Button variant="outline" onClick={() => calcularMacroEquipo(mlTotalMacro, horasMacro)} className="mt-5 hover:bg-green-500 transition hover:scale-105">Calcular</Button>
       <Button variant="outline" onClick={() => limparCamposMacro()} className="mt-5 hover:bg-red-500 transition hover:scale-105">Limpar</Button>
       </div>
@@ -100,25 +97,22 @@ const Fluidoterapia = () => {
 
     </div>
     <p className="text-xl mt-10">Micro Equipo - 60 microgotas/mL</p>
-    <div className="flex gap-5 items-end">
+    <div className="flex flex-col md:flex-row gap-5">
       <div className="flex flex-col">
       <label className="font-light">Valor total em mL</label>
       <Input 
       value={mlTotalMicro}
       onChange={(e) => setMlTotalMicro(e.target.value)}
-      placeholder="Exemplo: 360" className='w-full max-w-[120px]'/>
+      placeholder="Exemplo: 360" className='w-full md:max-w-[120px]'/>
       </div>
       <div className="flex flex-col">
       <label className="font-light">Em quantas horas?</label>
       <Input 
       value={horasMicro}
       onChange={(e) => setHorasMicro(e.target.value)}
-      placeholder="Exemplo: 2 " className='w-full max-w-[120px]'/>
-
-      
-
+      placeholder="Exemplo: 2 " className='w-full md:max-w-[120px]'/>
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 mt-1">
       <Button variant="outline" onClick={() => calcularMicroEquipo(mlTotalMicro, horasMicro)} className="mt-5 hover:bg-green-500 transition hover:scale-105">Calcular</Button>
       <Button variant="outline" onClick={() => limparCamposMicro()} className="mt-5 hover:bg-red-500 transition hover:scale-105">Limpar</Button>
       </div>

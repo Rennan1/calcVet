@@ -36,7 +36,7 @@ const EquipoCalculatorCard = ({
   return (
     <div className="bg-white p-4 shadow">
       <h1 className="text-xl">{title}</h1>
-      <div className="grid grid-cols-2">
+      <div className="flex-flex-col">
         <div className="flex flex-col md:flex-row md:gap-5">
           <div className="flex flex-col">
             <label className="font-light">{volumeLabel}</label>

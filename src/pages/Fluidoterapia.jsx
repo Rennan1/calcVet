@@ -3,26 +3,30 @@ import React from "react";
 import EquipoCalculatorCard from "@/components/EquipoCalculatorCard";
 import IntroFluidoterapia from "@/components/IntroFluidoterapia";
 import RessurectionCard from "@/components/RessurectionCard";
+import FluidoterapiaTips from "@/components/FluidoterapiaTips";
 
 const Fluidoterapia = () => {
   return (
-    <div className="flex flex-col justify-center items-center text-center">
-      <IntroFluidoterapia />
-      <RessurectionCard 
-      title="Cálculo de Ressuscitar"
-      />
-      <div className=""></div>
-      <div className="flex flex-col gap-5 mt-5">
-      <EquipoCalculatorCard
-        title="Macro Equipo - 20 gotas/mL"
-        factorPerHourToPerSecond={180}
-        resultUnitLabel="gota(s)/segundo"
-      />
-      <EquipoCalculatorCard
-        title="Micro Equipo - 60 microgotas/mL"
-        factorPerHourToPerSecond={60}
-        resultUnitLabel="microgota(s)/segundo"
-      />
+    <div className="grid grid-cols-1 md:grid-cols-[7fr_3fr]">
+      <div className="flex flex-col w-full max-w-[900px] mx-auto">
+        <IntroFluidoterapia />
+        <RessurectionCard title="Cálculo de Ressuscitar" />
+        <div className=""></div>
+        <div className="flex flex-col gap-5 mt-5">
+          <EquipoCalculatorCard
+            title="Macro Equipo - 20 gotas/mL"
+            factorPerHourToPerSecond={180}
+            resultUnitLabel="gota(s)/segundo"
+          />
+          <EquipoCalculatorCard
+            title="Micro Equipo - 60 microgotas/mL"
+            factorPerHourToPerSecond={60}
+            resultUnitLabel="microgota(s)/segundo"
+          />
+        </div>
+      </div>
+      <div>
+        <FluidoterapiaTips />
       </div>
     </div>
   );

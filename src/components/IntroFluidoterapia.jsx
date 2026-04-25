@@ -11,15 +11,6 @@ const IntroFluidoterapia = () => {
         e auxiliar na recuperação, garantindo segurança e eficácia no
         tratamento.
       </div>
-      <div className="mt-4 text-gray-700">
-        <p>Sempre arredonde para valores executáveis.</p>
-        <p>Utilize para os resultados:</p>
-        <ul className="list-disc list-inside">
-          <li>0,5 → 1 gota/2 s</li>
-          <li>0,33 → 1 gota/3 s</li>
-          <li>1,67 → ~2 gotas/seg</li>
-        </ul>
-      </div>
     </div>
   )
 }

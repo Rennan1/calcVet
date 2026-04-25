@@ -8,8 +8,11 @@ const Fluidoterapia = () => {
   return (
     <div className="flex flex-col justify-center items-center text-center">
       <IntroFluidoterapia />
-      <RessurectionCard />
+      <RessurectionCard 
+      title="Cálculo de Ressuscitar"
+      />
       <div className=""></div>
+      <div className="flex flex-col gap-5 mt-5">
       <EquipoCalculatorCard
         title="Macro Equipo - 20 gotas/mL"
         factorPerHourToPerSecond={180}
@@ -20,6 +23,7 @@ const Fluidoterapia = () => {
         factorPerHourToPerSecond={60}
         resultUnitLabel="microgota(s)/segundo"
       />
+      </div>
     </div>
   );
 };

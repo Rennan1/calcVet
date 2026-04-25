@@ -34,9 +34,9 @@ const EquipoCalculatorCard = ({
   };
 
   return (
-    <div>
-      <h1 className="text-xl mt-10">{title}</h1>
-      <div className="flex flex-col">
+    <div className="bg-white p-4 shadow">
+      <h1 className="text-xl">{title}</h1>
+      <div className="grid grid-cols-2">
         <div className="flex flex-col md:flex-row md:gap-5">
           <div className="flex flex-col">
             <label className="font-light">{volumeLabel}</label>
@@ -45,7 +45,7 @@ const EquipoCalculatorCard = ({
               value={mlTotal}
               onChange={(e) => setMlTotal(e.target.value)}
               placeholder="Exemplo: 360"
-              className="w-full md:h-12 md:max-w-[120px]"
+              className="w-full md:h-12 md:max-w-[300px] md:rounded-none"
             />
           </div>
           <div className="flex flex-col">
@@ -55,26 +55,26 @@ const EquipoCalculatorCard = ({
               value={horas}
               onChange={(e) => setHoras(e.target.value)}
               placeholder="Exemplo: 2"
-              className="w-full md:h-12 md:max-w-[120px]"
+              className="w-full md:h-12 md:max-w-[300px] md:rounded-none"
             />
-          </div>
-          <div className="flex gap-2 mt-1">
+          </div>          
+        </div>
+        <div className="flex gap-2">
             <Button
               variant="outline"
               onClick={calcular}
-              className="mt-5 hover:bg-green-500 md:h-12 transition hover:scale-105"
+              className="mt-5 bg-primary text-white hover:bg-green-600 md:h-12 md:min-w-[300px] transition hover:scale-105 rounded-none"
             >
               Calcular
             </Button>
             <Button
               variant="outline"
               onClick={limpar}
-              className="mt-5 hover:bg-red-500 md:h-12 transition hover:scale-105"
+              className="mt-5 hover:bg-red-700 md:h-12 md:min-w-[140px] transition hover:scale-105 rounded-none"
             >
               Limpar
             </Button>
           </div>
-        </div>
         {resultado && (
           <p className="text-lg font-bold mt-4 text-center">
             Resultado: {resultado} {resultUnitLabel}

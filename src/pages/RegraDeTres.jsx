@@ -26,8 +26,8 @@ const RegraDeTres = () => {
             type="number"
             value={valor1}
             onChange={(e) => setValor1(e.target.value)}
-            placeholder="Valor 1"
-            className="w-full md:text-xl md:h-12 md:max-w-[120px]"
+            placeholder="A"
+            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px]"
           />
           <p className="bg-green-500 px-2 py-1 rounded text-sm font-bold">
             ESTÁ PARA
@@ -36,8 +36,8 @@ const RegraDeTres = () => {
             type="number"
             value={valor2}
             onChange={(e) => setValor2(e.target.value)}
-            placeholder="Valor 2"
-            className="w-full md:text-xl md:h-12 md:max-w-[120px]"
+            placeholder="B"
+            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px]"
           />
         </div>
         <h1 className="bg-black/90 text-green-500 p-2 font-bold rounded-xl">
@@ -48,8 +48,8 @@ const RegraDeTres = () => {
             type="number"
             value={valor3}
             onChange={(e) => setValor3(e.target.value)}
-            placeholder="Valor 3"
-            className="w-full md:text-xl md:h-12 md:max-w-[120px]"
+            placeholder="C"
+            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px]"
           />
 
           <p className="bg-green-500 px-2 py-1 rounded text-sm font-bold">
@@ -59,8 +59,8 @@ const RegraDeTres = () => {
           <Input
             value={resultado}
             disabled
-            placeholder="Resultado"
-            className="w-full md:text-xl md:h-12 md:max-w-[120px] bg-green-600 text-white placeholder:text-white"
+            placeholder="X"
+            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px] bg-green-600 text-white placeholder:text-white"
           />
         </div>
       </div>

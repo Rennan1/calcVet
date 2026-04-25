@@ -10,7 +10,7 @@ const Sidebar = () => {
     }`;
     
   return (
-    <aside className="w-64 h-full border-r shadow pt-5">
+    <aside className="w-64 h-full border-r shadow pt-5 bg-white">
       <ul className="flex flex-col">
         <NavLink to="/" className={linkClass}>
           Tela Inicial

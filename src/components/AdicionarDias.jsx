@@ -50,7 +50,7 @@ const AdicionarDias = () => {
             <Input
               id="dias-acrescidos"
               type="number"
-              placeholder="Quantos dias a acrescentar da data inicial?"
+              placeholder="Dias a serem acrescidos"
               className="w-full md:h-12 md:rounded-none"
               value={diasAcrescidos}
               onChange={(e) => setDiasAcrescidos(e.target.value)}

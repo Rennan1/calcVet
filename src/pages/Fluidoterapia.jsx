@@ -12,7 +12,7 @@ const Fluidoterapia = () => {
         <div className="mb-10">
           <IntroFluidoterapia />
         </div>
-        <RessurectionCard title="Cálculo de Ressuscitar" />
+        <RessurectionCard title="Cálculo de Ressuscitar - Em breve" />
         <div className=""></div>
         <div className="flex flex-col gap-5 mt-5">
           <EquipoCalculatorCard

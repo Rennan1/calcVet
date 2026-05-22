@@ -49,6 +49,7 @@ const RessurectionCard = ({
               value={mlTotal}
               onChange={(e) => setMlTotal(e.target.value)}
               placeholder="Exemplo: 360"
+              disabled
               className="w-full md:h-12 md:rounded-none"
             />
           </div>
@@ -57,6 +58,7 @@ const RessurectionCard = ({
             <Input
               type="number"
               value={horas}
+              disabled
               onChange={(e) => setHoras(e.target.value)}
               placeholder="Exemplo: 2"
               className="w-full md:h-12 md:rounded-none"
@@ -66,6 +68,7 @@ const RessurectionCard = ({
         <div className="flex gap-2">
           <Button
             variant="outline"
+            disabled
             onClick={calcular}
             className="bg-primary text-white hover:bg-green-600 md:h-12 w-10/12 transition hover:scale-105 rounded-none"
           >
@@ -73,6 +76,7 @@ const RessurectionCard = ({
           </Button>
           <Button
             variant="outline"
+            disabled
             onClick={limpar}
             className="hover:bg-red-700 md:h-12 transition w-2/12 hover:scale-105 rounded-none"
           >

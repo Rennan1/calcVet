@@ -3,32 +3,29 @@ import { Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const DiferencaDatas = () => {
+const AdicionarDias = () => {
   const [dataInicial, setDataInicial] = React.useState("");
-  const [dataFinal, setDataFinal] = React.useState("");
-  const [diferencaDias, setDiferencaDias] = React.useState(null);
+  const [diasAcrescidos, setDiasAcrescidos] = React.useState("");
+  const [novaData, setNovaData] = React.useState(null);
 
   const calcularDias = () => {
-    const inicio = new Date(dataInicial);
-    const fim = new Date(dataFinal);
+    const inicio = new Date(dataInicial + "T00:00:00");
+    inicio.setDate(inicio.getDate() + Number(diasAcrescidos))
 
-    const diferencaMs = fim - inicio;
-    const dias = diferencaMs / (1000 * 60 * 60 * 24);
-
-    setDiferencaDias(dias);
+    setNovaData(inicio);
   };
 
   const limpar = () => {
     setDataInicial("");
-    setDataFinal("");
-    setDiferencaDias(null);
+    setDiasAcrescidos("");
+    setNovaData(null);
   };
 
   return (
     <div className="bg-white p-4 shadow">
       <div className="flex gap-2">
         <Calculator className="text-primary" size={24} />
-        <h1 className="text-xl text-primary font-light mb-2">Diferença entre datas</h1>
+        <h1 className="text-xl text-primary font-light mb-2">Adicionar dias</h1>
       </div>
 
       <div className="flex flex-col gap-4 w-full">
@@ -47,15 +44,16 @@ const DiferencaDatas = () => {
           </div>
 
           <div className="flex flex-col w-full md:flex-1">
-            <label htmlFor="data-final" className="font-light">
-              Data Final
+            <label htmlFor="dias-acrescidos" className="font-light">
+              Dias a serem acrescidos
             </label>
             <Input
-              id="data-final"
-              type="date"
+              id="dias-acrescidos"
+              type="number"
+              placeholder="Quantos dias a acrescentar da data inicial?"
               className="w-full md:h-12 md:rounded-none"
-              value={dataFinal}
-              onChange={(e) => setDataFinal(e.target.value)}
+              value={diasAcrescidos}
+              onChange={(e) => setDiasAcrescidos(e.target.value)}
             />
           </div>
         </div>
@@ -64,7 +62,7 @@ const DiferencaDatas = () => {
           <Button
             variant="outline"
             onClick={calcularDias}
-            disabled={!dataInicial || !dataFinal}
+            disabled={!dataInicial || !diasAcrescidos}
             className="bg-primary text-white hover:bg-green-600 md:h-12 w-10/12 transition hover:scale-105 rounded-none"
           >
             Calcular Dias
@@ -78,9 +76,9 @@ const DiferencaDatas = () => {
           </Button>
         </div>
 
-        {diferencaDias !== null && (
+        {novaData !== null && (
           <p className="text-xl font-bold mt-4 text-center bg-gray-50 text-primary rounded-full">
-            A diferença de dias é de {diferencaDias?.toFixed(0)} dia(s)
+            A nova data é {novaData.toLocaleDateString("pt-BR")}
           </p>
         )}
       </div>
@@ -88,4 +86,4 @@ const DiferencaDatas = () => {
   );
 };
 
-export default DiferencaDatas;
+export default AdicionarDias;

@@ -2,6 +2,7 @@ import React from "react";
 import IntroCalculadoraDeData from "@/components/IntroCalculadoraDeData";
 import { Calculator } from "lucide-react";
 import DiferencaDatas from "@/components/DiferencaDatas";
+import AdicionarDias from "@/components/AdicionarDias";
 const CalculadoraDeData = () => {
   // const [dataInicial, setDataInicial] = React.useState("");
   // const [dataFinal, setDataFinal] = React.useState("");
@@ -25,6 +26,8 @@ const CalculadoraDeData = () => {
           <IntroCalculadoraDeData />
           <div className="mt-10">
             <DiferencaDatas />
+
+            <AdicionarDias />
           </div>
         </div>
       </div>

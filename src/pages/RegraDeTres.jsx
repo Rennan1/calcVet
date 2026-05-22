@@ -1,68 +1,18 @@
 import { useEffect, useState } from "react";
 import IntroRegraDeTres from "../components/IntroRegraDeTres";
 import { Input } from "../components/ui/input";
+import CalcRegraDeTres from "@/components/CalcRegraDeTres";
+import RegraDeTresTips from "@/components/RegraDeTresTips";
 
 const RegraDeTres = () => {
-  const [valor1, setValor1] = useState("");
-  const [valor2, setValor2] = useState("");
-  const [valor3, setValor3] = useState("");
-  const [resultado, setResultado] = useState("");
-
-  useEffect(() => {
-    calculo();
-  }, [valor1, valor2, valor3]);
-  const calculo = () => {
-    if (valor1 && valor2 && valor3) {
-      const res = (valor2 * valor3) / valor1;
-      setResultado(res.toFixed(2));
-    }
-  };
   return (
-    <div className="flex flex-col justify-center items-center text-center">
-      <IntroRegraDeTres />
-      <div className="flex flex-col gap-5 mt-10">
-        <div className="flex gap-5 items-center">
-          <Input
-            type="number"
-            value={valor1}
-            onChange={(e) => setValor1(e.target.value)}
-            placeholder="A"
-            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px]"
-          />
-          <p className="bg-green-500 px-2 py-1 rounded text-sm font-bold">
-            ESTÁ PARA
-          </p>
-          <Input
-            type="number"
-            value={valor2}
-            onChange={(e) => setValor2(e.target.value)}
-            placeholder="B"
-            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px]"
-          />
-        </div>
-        <h1 className="bg-black/90 text-green-500 p-2 font-bold rounded-xl">
-          ASSIM COMO
-        </h1>
-        <div className="flex gap-5 items-center">
-          <Input
-            type="number"
-            value={valor3}
-            onChange={(e) => setValor3(e.target.value)}
-            placeholder="C"
-            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px]"
-          />
-
-          <p className="bg-green-500 px-2 py-1 rounded text-sm font-bold">
-            ESTÁ PARA
-          </p>
-
-          <Input
-            value={resultado}
-            disabled
-            placeholder="X"
-            className="text-center w-full md:text-xl md:h-12 md:max-w-[120px] bg-green-600 text-white placeholder:text-white"
-          />
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-[7fr_3fr]">
+      <div className="w-full max-w-[900px] mx-auto">
+        <IntroRegraDeTres />
+        <CalcRegraDeTres />
+      </div>
+      <div>
+        <RegraDeTresTips />
       </div>
     </div>
   );

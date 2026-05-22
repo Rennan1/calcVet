@@ -3,7 +3,7 @@ import React from "react";
 
 const FluidoterapiaTips = () => {
   return (
-    <div className="bg-white mt-4 text-gray-700 p-4 md:max-w-[400px] md:mt-28 rounded-sm">
+    <div className="bg-white mt-4 text-gray-700 p-4 md:max-w-[300px] md:mt-28 rounded-sm">
       <div className="flex gap-2">
         <Info size={24} className="text-primary" />
 

@@ -48,7 +48,7 @@ const EquipoCalculatorCard = ({
               type="number"
               value={mlTotal}
               onChange={(e) => setMlTotal(e.target.value)}
-              placeholder="Exemplo: 360"
+              placeholder="Digite o valor total em mL"
               className="w-full md:h-12 md:rounded-none"
             />
           </div>
@@ -58,7 +58,7 @@ const EquipoCalculatorCard = ({
               type="number"
               value={horas}
               onChange={(e) => setHoras(e.target.value)}
-              placeholder="Exemplo: 2"
+              placeholder="Digite o número de horas"
               className="w-full md:h-12 md:rounded-none"
             />
           </div>

@@ -9,7 +9,9 @@ const Fluidoterapia = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-[7fr_3fr]">
       <div className="flex flex-col w-full max-w-[900px] mx-auto">
-        <IntroFluidoterapia />
+        <div className="mb-10">
+          <IntroFluidoterapia />
+        </div>
         <RessurectionCard title="Cálculo de Ressuscitar" />
         <div className=""></div>
         <div className="flex flex-col gap-5 mt-5">

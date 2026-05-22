@@ -1,10 +1,10 @@
-import { Calculator, Droplet, House } from "lucide-react";
+import { Calculator, Droplet, House, Calendar } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const linkClass = ({ isActive }) =>
-    `p-4 transition ${
+    `p-4 transition${
       isActive
         ? "text-primary font-semibold bg-green-500/20 rounded-xl"
         : "hover:text-primary hover:scale-110"
@@ -25,6 +25,10 @@ const Sidebar = () => {
           <Calculator className="inline-block mr-2" size={20} />
           Regra de 3
         </NavLink>
+        <div className="p-4 transition opacity-50 cursor-not-allowed">
+          <Calendar className="inline-block mr-2" size={20} />
+          Calculadora de Data - Em breve
+        </div>
       </ul>
     </aside>
   );

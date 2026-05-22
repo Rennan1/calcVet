@@ -25,10 +25,10 @@ const Sidebar = () => {
           <Calculator className="inline-block mr-2" size={20} />
           Regra de 3
         </NavLink>
-        <div className="p-4 transition opacity-50 cursor-not-allowed">
+        <NavLink to="/calculadora-de-data" className={linkClass} disabled>
           <Calendar className="inline-block mr-2" size={20} />
-          Calculadora de Data - Em breve
-        </div>
+          Calculadora de Data
+        </NavLink>
       </ul>
     </aside>
   );

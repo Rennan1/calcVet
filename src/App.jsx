@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Fluidoterapia from './pages/Fluidoterapia'
 import Layout from "./components/Layout";
 import RegraDeTres from './pages/RegraDeTres'
+import CalculadoraDeData from './pages/CalculadoraDeData';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
         <Route index element={<Home />}/>
         <Route path='fluidoterapia' element={<Fluidoterapia />}/>
         <Route path='regra-de-3' element={<RegraDeTres />}/>
+        <Route path='calculadora-de-data' element={<CalculadoraDeData />}/>
         </Route>
       </Routes>
     </BrowserRouter>

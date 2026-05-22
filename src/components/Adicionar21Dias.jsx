@@ -56,17 +56,19 @@ const Adicionar21Dias = () => {
         <div className="flex gap-2">
           <Button
             variant="outline"
+            disabled={!dataInicial}
             className="bg-primary text-white hover:bg-green-600 md:h-12 w-4/12 transition hover:scale-105 rounded-none"
             onClick={calcular15Dias}
           >
-            Calcular 15 Dias
+            Calcular 15d
           </Button>
           <Button
             variant="outline"
+            disabled={!dataInicial}
             className="bg-primary text-white hover:bg-green-600 md:h-12 w-4/12 transition hover:scale-105 rounded-none"
             onClick={calcular21Dias}
           >
-            Calcular 21 Dias
+            Calcular 21d
           </Button>
 
           <Button

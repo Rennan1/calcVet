@@ -1,23 +1,9 @@
 import React from "react";
 import IntroCalculadoraDeData from "@/components/IntroCalculadoraDeData";
-import { Calculator } from "lucide-react";
 import DiferencaDatas from "@/components/DiferencaDatas";
 import AdicionarDias from "@/components/AdicionarDias";
+import Adicionar21Dias from "@/components/Adicionar21Dias";
 const CalculadoraDeData = () => {
-  // const [dataInicial, setDataInicial] = React.useState("");
-  // const [dataFinal, setDataFinal] = React.useState("");
-  // const [diferencaDias, setDiferencaDias] = React.useState(null);
-
-  const calcularDias = () => {
-    const inicio = new Date(dataInicial);
-    const fim = new Date(dataFinal);
-
-    const diferencaMs = fim - inicio;
-
-    const dias = diferencaMs / (1000 * 60 * 60 * 24);
-
-    setDiferencaDias(dias);
-  };
 
   return (
     <>
@@ -25,9 +11,9 @@ const CalculadoraDeData = () => {
         <div className="flex flex-col w-full max-w-[900px] mx-auto">
           <IntroCalculadoraDeData />
           <div className="flex flex-col gap-5 mt-10">
-            <DiferencaDatas />
-
+            <Adicionar21Dias />
             <AdicionarDias />
+            <DiferencaDatas />
           </div>
         </div>
       </div>

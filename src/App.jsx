@@ -5,6 +5,7 @@ import Fluidoterapia from './pages/Fluidoterapia'
 import Layout from "./components/Layout";
 import RegraDeTres from './pages/RegraDeTres'
 import CalculadoraDeData from './pages/CalculadoraDeData';
+import CalculoDeVolume from './pages/CalculoDeVolume';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
         <Route index element={<Home />}/>
+        <Route path='calculo-de-volume' element={<CalculoDeVolume />}/>
         <Route path='fluidoterapia' element={<Fluidoterapia />}/>
         <Route path='regra-de-3' element={<RegraDeTres />}/>
         <Route path='calculadora-de-data' element={<CalculadoraDeData />}/>

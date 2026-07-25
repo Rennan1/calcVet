@@ -5,8 +5,7 @@ import { Cat } from "lucide-react";
 
 const ReanimacaoGato = ({ title, volumeLabel = "Peso do animal (kg)" }) => {
   const [pesoGato, setPesoGato] = useState("");
-  const [valorMinimo, setValorMinimo] = useState("");
-  const [valorMaximo, setValorMaximo] = useState("");
+  const [resultado, setResultado] = useState(null)  
 
   const calcular = () => {
     const kg = Number(pesoGato);
@@ -14,14 +13,12 @@ const ReanimacaoGato = ({ title, volumeLabel = "Peso do animal (kg)" }) => {
     const minimo = kg * 5;
     const maximo = kg * 10;
 
-    setValorMinimo(minimo);
-    setValorMaximo(maximo);
+    setResultado({kg, minimo, maximo})
   };
 
   const limpar = () => {
     setPesoGato("");
-    setValorMinimo("");
-    setValorMaximo("");
+    setResultado("")
   };
 
   return (
@@ -54,17 +51,16 @@ const ReanimacaoGato = ({ title, volumeLabel = "Peso do animal (kg)" }) => {
           </Button>
           <Button
             variant="outline"
-            disabled={!(pesoGato || valorMinimo || valorMaximo)}
+            disabled={!(pesoGato || !resultado)}
             onClick={limpar}
             className="hover:bg-red-700 md:h-12 transition w-2/12 hover:scale-105 rounded-none"
           >
             Limpar
           </Button>
         </div>
-        {valorMinimo && valorMaximo && (
+        {resultado && (
           <p className="text-xl font-bold mt-4 text-center bg-gray-50 text-primary rounded-full">
-            A dose indicada para {pesoGato}kg é de {valorMinimo}mL até{" "}
-            {valorMaximo}mL
+            A dose indicada para {resultado.kg}kg é de {resultado.minimo}mL até {resultado.maximo}mL
           </p>
         )}
       </div>

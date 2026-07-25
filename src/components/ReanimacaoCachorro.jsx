@@ -5,8 +5,7 @@ import { SquareActivity, Dog } from "lucide-react";
 
 const ReanimacaoCachorro = ({ title, volumeLabel = "Peso do animal (kg)" }) => {
   const [pesoCachorro, setPesoCachorro] = useState("");
-  const [valorMinimo, setValorMinimo] = useState("");
-  const [valorMaximo, setValorMaximo] = useState("");
+  const [resultado, setResultado] = useState(null)
 
   const calcular = () => {
     const kg = Number(pesoCachorro);
@@ -14,14 +13,12 @@ const ReanimacaoCachorro = ({ title, volumeLabel = "Peso do animal (kg)" }) => {
     const minimo = kg * 15;
     const maximo = kg * 20;
 
-    setValorMinimo(minimo);
-    setValorMaximo(maximo);
+    setResultado({kg, minimo, maximo})
   };
 
   const limpar = () => {
     setPesoCachorro("");
-    setValorMinimo("");
-    setValorMaximo("");
+    setResultado("")
   };
 
   return (
@@ -54,17 +51,16 @@ const ReanimacaoCachorro = ({ title, volumeLabel = "Peso do animal (kg)" }) => {
           </Button>
           <Button
             variant="outline"
-            disabled={!(pesoCachorro || valorMinimo || valorMaximo)}
+            disabled={!(pesoCachorro || !resultado)}
             onClick={limpar}
             className="hover:bg-red-700 md:h-12 transition w-2/12 hover:scale-105 rounded-none"
           >
             Limpar
           </Button>
         </div>
-        {valorMinimo && valorMaximo && (
+        {resultado && (
           <p className="text-xl font-bold mt-4 text-center bg-gray-50 text-primary rounded-full">
-            A dose indicada para {pesoCachorro}kg é de {valorMinimo}mL até{" "}
-            {valorMaximo}mL
+            A dose indicada para {resultado.kg}kg é de {resultado.minimo}mL até {resultado.maximo}mL
           </p>
         )}
       </div>
